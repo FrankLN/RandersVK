@@ -1,0 +1,22 @@
+#rootNavbar {
+	background-color: #313131;	
+}
+
+#nav {
+    text-align: justify;
+    min-width: 500px;
+	font-size: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#nav li {
+    display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12px 0px;
+}

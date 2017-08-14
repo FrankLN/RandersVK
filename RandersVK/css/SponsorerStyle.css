@@ -1,0 +1,23 @@
+#sponsorer {
+	border: 2px;
+	border-style: solid;
+	border-color: grey;
+	padding: 0px;
+}
+
+#sponsorer p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 5px 0px;
+	margin: 0px;
+	background-color: lightgrey;
+}
+
+#sponsorer div {
+	padding: 15px;
+}
+
+#sponsorerList img{
+	padding: 10px;
+}

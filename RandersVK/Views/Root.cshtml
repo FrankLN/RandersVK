@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Root>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>@CurrentPage.pageTitle - @CurrentPage.pageName</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Header.css" rel="stylesheet">
+    @RenderSection("Head", false)
+    
+  </head>
+  <body>
+    <nav id="rootNavbar" class="navbar navbar-default">
+      <div class="container-fluid">
+      </div>
+    </nav>
+    <div class=container>
+      <div>
+        <image width="100%" src="@CurrentPage.headerImage.Url" />
+      </div>
+      
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul id="nav">
+              <li>Forside</li>
+              <li>Nyheder</li>
+              <li>Om klubben</li>
+              <li>Kontakt</li>
+              <li>Tilmelding og betaling</li>
+              <li>Galleri</li>
+              <li>40 års jubilæum i RAV</li>
+              <li>RAV CUP 2017</li>
+          </ul>
+        </div>
+      </nav>
+    @RenderBody()
+    </div>
+    <div id="footer"></div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/scripts/bootstrap.min.js"></script>
+  </body>
+</html>

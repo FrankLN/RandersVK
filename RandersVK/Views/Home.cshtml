@@ -1,0 +1,55 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "~/Views/Root.cshtml";
+}
+@section Head
+{
+    <link href="css/SponsorerStyle.css" rel="stylesheet">
+    <link href="css/HomeStyle.css" rel="stylesheet">
+}
+
+<div class="container-fluid">
+  <div class="row">
+      <div id="frontImage" class="col-md-8">
+          <img width="100%" src="@CurrentPage.frontImage.Url" />
+          
+          <br />
+          <br />
+          
+          @{
+            var count = 0;
+            foreach(var news in @CurrentPage.News)
+            {
+              <div class="newsModule">
+                @news.Title<br />
+                @news.Datetime | @news.Publisher<br />
+                @news.BodyText.Value
+                <img src="@news.Image.Url" />
+              </div>
+              if(count == 1)
+              {
+                <hr />
+                count = 0;
+              }
+              else
+              {
+                count++;
+              }
+            }
+          }
+      </div>
+      
+      <div id="sponsorer" class="col-md-4">
+          <p>SPONSORER</p>
+          
+          <div id=sponsorerList>
+              @foreach(var image in @CurrentPage.Sponsorer)
+              {
+                <img src="@image.Url" />
+              }
+          </div>
+      </div>
+  </div>
+    
+</div>
